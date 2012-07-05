@@ -19,7 +19,7 @@ Todas as classes são herdadas do ActiveResouce. Veja a documentação do [Activ
 ```perl
 use CobreGratis::Bank_Billet;
 
-Bank_Billet->user("3NIAl4KWk87sFBbpqOUCSURED4zIx3Xiqz8gXSDtFF77YIADbRnoCXRjCHQ3");
+Bank_Billet->user("seu_token");
 Bank_Billet->password("X");
 ```
 
