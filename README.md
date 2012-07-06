@@ -26,15 +26,19 @@ Bank_Billet->password("X");
 ## Uso
 
 ```perl
-use Data::Dumper;
-
+# criar um boleto
 my $bank_billet = Bank_Billet->create(
   amount => 230.50,
   expire_at => '2015-07-22',
   name => 'Rafael Lima'
 );
 
-print Dumper($bank_billet->attributes);
+print "Nosso Número: ".$bank_billet->attributes->{'our-number'}."\n";
+print "Vencimento: ".$bank_billet->attributes->{'expire-at'}."\n";
+print "Valor: ".$bank_billet->attributes->{'amount'}."\n";
+print "Sacado: ".$bank_billet->attributes->{'name'}."\n";
+print "URL: ".$bank_billet->attributes->{'external-link'}."\n";
+print "=================================\n";
 ```
 
 Veja um exemplo no arquivo [example.pm](https://github.com/BielSystems/cobregratis-perl/blob/master/example.pm)
