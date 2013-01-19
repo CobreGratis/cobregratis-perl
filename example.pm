@@ -5,6 +5,9 @@ package main;
 use Data::Dumper;
 use CobreGratis::Bank_Billet;
 
+# Ignora o erro "Can't verify SSL peers without knowning which Certificate Authorities to trust"
+$ENV{PERL_LWP_SSL_VERIFY_HOSTNAME}=0;
+
 Bank_Billet->user("ddxm00pJnGhrYJhyypUgpwqkbvKMASEznqRM2MANv6nqz08APfWxdurtUJoz");
 Bank_Billet->password("X");
 
@@ -15,6 +18,7 @@ my $bank_billet = Bank_Billet->create(
 );
 
 my $bank_billet_id = $bank_billet->attributes->{'id'};
+sleep(1); # Garante que não vai exceder o limite de requisições (https://github.com/BielSystems/cobregratis-api#limite-de-requisições)
 my $bank_billet = Bank_Billet->find($bank_billet_id);
 
 print "Nosso Número: ".$bank_billet->attributes->{'our-number'}."\n";
