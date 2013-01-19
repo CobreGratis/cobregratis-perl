@@ -10,9 +10,16 @@ Todas as classes são herdadas do ActiveResouce. Veja a documentação do [Activ
 
 ### Pré-requisitos
 
-* ActiveResource
-* common::sense
-* XML::Hash
+Instale os pré-requisitos nesta ordem:
+
+#### [XML::Hash](http://search.cpan.org/~braceta/XML-Hash-0.95/lib/XML/Hash.pm)
+```$ sudo cpan XML::Hash```
+
+#### [common::sense](http://search.cpan.org/~mlehmann/common-sense-3.6/sense.pm.PL)
+```$ sudo cpan common::sense```
+
+#### [ActiveResource](http://search.cpan.org/~gugod/ActiveResource-0.01/lib/ActiveResource.pm)
+```$ sudo cpan ActiveResource```
 
 ### Configurando seu token
 
